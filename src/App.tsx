@@ -5,8 +5,6 @@ import {
   RouterProvider,
 } from "@tanstack/react-router";
 
-import Header from "./components/Header";
-
 // Route Components
 import Index from "./routes";
 import About from "./routes/About";
