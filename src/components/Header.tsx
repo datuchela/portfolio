@@ -2,37 +2,19 @@ import { Link } from "@tanstack/react-router";
 import projectList from "../assets/projectList";
 
 const Header = () => {
-  return (
-    // <header className="w-full flex items-center justify-between">
-    //   <Link to="/" className="font-bold text-2xl">
-    //     datuchela
-    //   </Link>
-    //   <ul className="flex items-center gap-12">
-    //     <li>
-    //       <Link to="/about">about me</Link>
-    //     </li>
-    //     <li>
-    //       <Link to="/projects">projects</Link>
-    //     </li>
-    //     <li>
-    //       <button className="px-6 py-3 rounded-lg bg-gray-700 text-white font-semibold hover:bg-black">
-    //         contact
-    //       </button>
-    //     </li>
-    //   </ul>
-    // </header>
-    <HeaderInside />
-  );
+  return <DaisyUIHeader />;
 };
 
 export default Header;
 
-const HeaderInside = () => {
+const DaisyUIHeader = () => {
   return (
     <>
       <header className="navbar bg-base-100">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">datuchela</a>
+          <Link to="/" className="btn btn-ghost normal-case text-xl">
+            datuchela
+          </Link>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal p-0">
@@ -52,10 +34,10 @@ const HeaderInside = () => {
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
               </Link>
-              <ul className="p-2 bg-base-100">
+              <ul className="p-2 bg-[#f6f8fa]">
                 {projectList.map((project) => (
-                  <li>
-                    <Link to={`/${project.name}`}>{project.name}</Link>
+                  <li key={project.id}>
+                    <Link to={`/project/${project.name}`}>{project.name}</Link>
                   </li>
                 ))}
               </ul>
