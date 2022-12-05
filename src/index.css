@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 body {
-  font-family: "Fira Sans", sans-serif;
   @apply w-screen h-screen;
 }
 
-h1 {
-  @apply text-5xl font-bold;
+main {
+  @apply prose;
 }
