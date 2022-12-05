@@ -6,6 +6,6 @@ body {
   @apply w-screen h-screen;
 }
 
-main {
+article {
   @apply prose;
 }
