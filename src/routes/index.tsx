@@ -2,9 +2,9 @@ import Projects from "../components/Projects";
 
 export default function Index() {
   return (
-    <div>
+    <article>
       <h1>my recent projects:</h1>
       <Projects />
-    </div>
+    </article>
   );
 }
