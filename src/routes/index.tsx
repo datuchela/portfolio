@@ -18,7 +18,7 @@ export default function Index() {
     isLoading,
     isError,
     error,
-  } = useQuery<any, { message: string }>(["repos"], fetchRepos, {
+  } = useQuery<Project[], { message: string }>(["repos"], fetchRepos, {
     refetchOnWindowFocus: false,
     retry: 2,
   });
