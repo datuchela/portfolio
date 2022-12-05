@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import Index from "./routes";
 import About from "./routes/About";
 import ProjectsPage from "./routes/Projects";
+import ProjectPage from "./routes/project/[projectName]";
 
 const rootRoute = createRouteConfig();
 
@@ -29,7 +30,17 @@ const projectsRoute = rootRoute.createRoute({
   component: ProjectsPage,
 });
 
-const routeConfig = rootRoute.addChildren([indexRoute, aboutRoute, projectsRoute]);
+export const singleProjectRoute = rootRoute.createRoute({
+  path: "/project/$projectName",
+  component: ProjectPage,
+});
+
+const routeConfig = rootRoute.addChildren([
+  indexRoute,
+  aboutRoute,
+  projectsRoute,
+  singleProjectRoute,
+]);
 
 const router = createReactRouter({ routeConfig });
 
