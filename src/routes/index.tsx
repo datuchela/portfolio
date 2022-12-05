@@ -43,12 +43,12 @@ export default function Index() {
         </p>
         <h4>And here comes javascript...</h4>
         <p>
-          Came across React in the very beginning of my javascript journey, this was blessing in
-          disguise, because I still wasn't that familiar with javascript itself, and now I had to do
-          this <i>weird</i> useState, useEffect stuff to make my apps work. Spent most of my time
-          banging my head against console that said "Too many re-renders. React limits the number of
-          renders to prevent an infinite loop", but StackOverflow, React Docs, and MDN Web Docs held
-          my hand through those tough times.
+          Came across React in the very beginning of my javascript journey, this was blessing and a
+          curse at the same time, because I still wasn't that familiar with javascript itself, and
+          now I had to do this <i>weird</i> useState, useEffect stuff to make my apps work. Spent
+          most of my time banging my head against console that said "Too many re-renders. React
+          limits the number of renders to prevent an infinite loop", but StackOverflow, React Docs,
+          and MDN Web Docs held my hand through those tough times.
         </p>
 
         <p>
