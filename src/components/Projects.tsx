@@ -1,12 +1,15 @@
+import { Link } from "@tanstack/react-router";
 import projectList from "../assets/projectList";
 
 const Projects = () => {
   return (
-    <div>
+    <ul>
       {projectList.map((project) => (
-        <div>{project.name}</div>
+        <li key={project.id}>
+          <Link to={`/project/${project.name}`}>{project.name}</Link>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
