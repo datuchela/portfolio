@@ -48,7 +48,7 @@ function App() {
   return (
     <RouterProvider router={router}>
       <div className="w-screen h-screen px-16 py-8 flex flex-col gap-16">
-        <Header />
+        {/* <Header /> */}
         <main className="flex flex-col">
           <Outlet />
         </main>
