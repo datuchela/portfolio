@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import projectList from "../assets/projectList";
 
 const Header = () => {
   return <DaisyUIHeader />;
@@ -34,13 +33,13 @@ const DaisyUIHeader = () => {
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
               </Link>
-              <ul className="p-2 bg-base-200">
+              {/* <ul className="p-2 bg-base-200">
                 {projectList.map((project) => (
                   <li key={project.id}>
                     <Link to={`/project/${project.name}`}>{project.name}</Link>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </li>
             <li>
               <Link to="/contact">Contact</Link>
