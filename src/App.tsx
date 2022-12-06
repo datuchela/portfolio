@@ -54,7 +54,7 @@ function App() {
         >
           <input onChange={() => setIsDarkMode(!isDarkMode)} type="checkbox" />
           <svg
-            className="swap-off fill-current w-8 h-8"
+            className="swap-on fill-current w-8 h-8"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -62,7 +62,7 @@ function App() {
           </svg>
 
           <svg
-            className="swap-on fill-current w-8 h-8"
+            className="swap-off fill-current w-8 h-8"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
