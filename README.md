@@ -2,4 +2,4 @@
 
 Personal website portfolio made using React <br/>
 
-live: <https://datuchela.com>
+live: <a target="_blank" href="https://datuchela.com">https://datuchela.com</a>
