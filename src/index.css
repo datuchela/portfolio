@@ -9,3 +9,7 @@ body {
 article {
   @apply prose;
 }
+
+aside {
+  @apply prose;
+}

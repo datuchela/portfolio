@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import Projects from "../components/Projects";
 
+import CopyIcon from "../components/CopyIcon";
+
 const fetchRepos = async () => {
   const res = await fetch("https://api.github.com/users/datuchela/repos", {
     headers: {
@@ -12,7 +14,7 @@ const fetchRepos = async () => {
   return data;
 };
 
-export default function Index() {
+export default function Index({ isDarkMode }: { isDarkMode: boolean }) {
   const {
     data: repos,
     isLoading,
@@ -61,15 +63,27 @@ export default function Index() {
         <p>
           Anyway...
           <br />
-          It's been 2 years since that, <i>think</i> I learned how modern web works now. I'm not
-          sure, check out my projects and decide yourself whether that's true or not.
+          It's been 2 years since that, <i>think</i> I learned how modern web works now.
+          <p>Thanks for reading through!</p>
+          You can check out my projects at{" "}
+          <a target="_blank" href="https://github.com/datuchela">
+            GitHub
+          </a>{" "}
+          or on the right of this article.
+          <br />
+          <p className="flex items-center gap-2">
+            You can contact me at{" "}
+            <a href="mailto:davit.narimanidze408@gmail.com">davit.narimanidze408@gmail.com</a>
+            <button onClick={() => navigator.clipboard.writeText("davit.narimanidze408@gmail.com")}>
+              <CopyIcon fill={isDarkMode ? "#ffffff" : "#000000"} width={20} height={20} />
+            </button>
+          </p>
         </p>
-        <p>Thanks for reading through!</p>
       </article>
-      <article>
+      <aside>
         <h2>My recent projects:</h2>
         {isLoading ? "Loading..." : isError ? error.message : <Projects data={repos} />}
-      </article>
+      </aside>
     </div>
   );
 }
