@@ -1,3 +1,5 @@
 # portfolio
-Personal website portfolio
-[https://datuchela.com](https://datuchela.com)
+
+Personal website portfolio made using React <br/>
+
+live: <https://datuchela.com>
