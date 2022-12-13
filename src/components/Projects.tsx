@@ -1,6 +1,3 @@
-import { Link } from "@tanstack/react-router";
-// import projectList from "../assets/projectList";
-
 type ProjectsProps = { data: Project[] };
 
 const Projects = ({ data }: ProjectsProps) => {
