@@ -1,14 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
-import Projects from "../components/Projects";
 
+// Components
+import Projects from "../components/Projects";
 import CopyIcon from "../components/CopyIcon";
 
 const fetchRepos = async () => {
-  const res = await fetch("https://api.github.com/users/datuchela/repos", {
-    headers: {
-      // "Authorization": `Bearer ${}`
-    },
-  });
+  const res = await fetch("https://api.github.com/users/datuchela/repos");
   const data = await res.json();
   if (res.status !== 200) throw Error(data.message);
   return data;
