@@ -60,20 +60,27 @@ export default function Index({ isDarkMode }: { isDarkMode: boolean }) {
         <p>
           Anyway...
           <br />
-          It's been 2 years since that, <i>think</i> I learned how modern web works now.
-          <p>Thanks for reading through!</p>
+          It's been 2 years since that, <i>think</i> I have a rough idea of how modern web works
+          now.
+          <p>
+            <i>Thanks for reading through!</i>
+          </p>
           You can check out my projects at{" "}
           <a target="_blank" href="https://github.com/datuchela">
             GitHub
           </a>{" "}
-          or on the right side of this article.
+          or on the right side (bottom, if you're on mobile) of this article.
           <br />
-          <p className="flex items-center gap-2">
-            You can contact me at{" "}
-            <a href="mailto:davit.narimanidze408@gmail.com">davit.narimanidze408@gmail.com</a>
-            <button onClick={() => navigator.clipboard.writeText("davit.narimanidze408@gmail.com")}>
-              <CopyIcon fill={isDarkMode ? "#ffffff" : "#000000"} width={20} height={20} />
-            </button>
+          <p className="flex flex-col lg:flex-row lg:items-center gap-2">
+            You can contact me at
+            <div className="flex items-center gap-2">
+              <a href="mailto:davit.narimanidze408@gmail.com">davit.narimanidze408@gmail.com</a>
+              <button
+                onClick={() => navigator.clipboard.writeText("davit.narimanidze408@gmail.com")}
+              >
+                <CopyIcon fill={isDarkMode ? "#ffffff" : "#000000"} width={20} height={20} />
+              </button>
+            </div>
           </p>
         </p>
       </article>
